@@ -1,23 +1,29 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
+const path = require('path');
+const app = require('../app');
 
-// test
-/*router.get('/', (req, res) => {
-   res.status(200).sendFile(path.join(__dirname + '/../views/index.html'));
+
+//route to home
+router.use(express.static('view'));
+
+router.get('/', (req, res  ) => {
+   res.render('main', {'title': 'El Grimorio Moderno'})
 });
-*/
 
-router.get('/', (req, res) => {
-   res.render('index', {'title':  'El Grimorio Moderno'});
-});
 
-router.get('/pociones', (req, res) => {
+//get
+
+//get pociones page
+
+/*router.get('/pociones', (req, res) => {
    res.render('pociones', {'pociones':  'Estas son las pociones modernas'});
-});
+});*/
+
+//get ingredientes page
 
 router.get('/ingredientes', (req, res) => {
-   res.render('ingredientes', {'ingredientes':  'Estos son los ingredientes modernos'});
+   res.render('ingredientes');
 });
 
 
