@@ -1,9 +1,9 @@
-const Ingredients = require('../models/ingredients');
 
 
 exports.getAllIngredients = (req, res, next) => { 
-    Ingredients.find().then(
-      (things) => {  
+  
+  req.model.Ingredients.findAll().then(
+      (ingredients) => {  
         res.status(200).json(ingredients);
       }
     ).catch(

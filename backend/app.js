@@ -3,13 +3,14 @@ const app = express();
 const path = require('path');
 const hbs =  require('express-handlebars');
 const { Z_PARTIAL_FLUSH } = require('zlib');
+const model = require('./models/index');
 
 const ingredientsRoutes = require('./routes/ingredients');
 
 
 //route to home
 //app.use(express.static('/../frontend/public/build'));
-app.use('/public', express.static(__dirname + '/public/build'));
+app.use('/public', express.static(__dirname + '/../frontend/public/build'));
 
 
 app.get('/', (req, res  ) => {
@@ -26,7 +27,10 @@ app.set('views',path.join(__dirname, '/views'));
 app.set('view engine', 'hbs');
 
 
-
+app.use(function( req, res, next) {
+    req.model = model;
+    next();
+});
 
 // on créé les routes
 app.use('/', require('./routes/routes'));
