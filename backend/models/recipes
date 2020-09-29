@@ -1,0 +1,18 @@
+const sequelize = require('sequelize');
+
+module.exports = (sequelize, DataTypes) => {
+
+    let recipe = sequelize.define('recipe', {
+        name:{type: DataTypes.STRING},
+        texte: {type: DataTypes.STRING,
+        ingredients}
+
+  }, 
+    {
+      timestamps: false,
+      tableName: 'recipe'
+  });
+
+  return recipe; 
+};
+

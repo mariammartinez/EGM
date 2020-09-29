@@ -1,1 +1,24 @@
-@import "bootstrap"
+@import "bootstrap";
+@import "button";
+
+#btnPocion{
+  @include btnPocion;
+}
+#btnIngredientes{
+  @include btnIngredientes;
+}
+
+#background{
+  background-image: url("https://wiccaradio.net/wp-content/uploads/2019/05/Grimoire40-1.jpg");
+  height: 400px;
+  color: white;
+
+}
+
+body{
+  margin: 20px;
+}
+li{
+  list-style: none;
+}
+

@@ -2,15 +2,22 @@
 
 exports.getAllIngredients = (req, res, next) => { 
   
-  req.model.Ingredients.findAll().then(
-      (ingredients) => {  
-        res.status(200).json(ingredients);
+  req.model.Ingredients.findAll().then( 
+    (ingredients) => {  console.log(ingredients);
+      
+      let liste = [];
+      for ( let ingredient of ingredients) {
+        liste.push({
+          name:ingredient.name,
+          description: ingredient.description
+        })
       }
-    ).catch(
-      (error) => {
-        res.status(400).json({
-          error: error
-        });
+      console.log(liste);
+      res.render('ingredientes', {ingredients: liste})
+      
+      
       }
+
+
     );
   };
