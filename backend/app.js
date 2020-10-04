@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const hbs =  require('express-handlebars');
+const exphbs =  require('express-handlebars');
 const { Z_PARTIAL_FLUSH } = require('zlib');
 const model = require('./models/index');
 
@@ -12,16 +12,14 @@ const ingredientsRoutes = require('./routes/ingredients');
 //app.use(express.static('/../frontend/public/build'));
 app.use('/public', express.static(__dirname + '/../frontend/public/build'));
 
-
-app.get('/', (req, res  ) => {
-   res.render('main', {'title': 'El Grimorio Moderno'})
-});
-
-app.engine('hbs', hbs({extname: 'hbs', 
-    defaultLayout: 'index', 
+var hbs = exphbs.create({
+    extname: '.hbs',
+    defaultLayout: 'index',
     layoutDir:__dirname +'/views/layouts',
-    partialDir:__dirname +'/views/partials'
-}));
+    partialDir:__dirname +'/views/partials',
+    helpers: require('./helpers/handlebarshelpers').helpers
+});
+app.engine('hbs', hbs.engine);
 
 app.set('views',path.join(__dirname, '/views'));
 app.set('view engine', 'hbs');
@@ -33,9 +31,13 @@ app.use(function( req, res, next) {
 });
 
 // on créé les routes
-app.use('/', require('./routes/routes'));
+//app.use('/', require('./routes/routes'));
 
-app.use('/ingredients', require('./routes/ingredients'));
+app.get('/', (req, res  ) => {
+    res.render('main', {'title': 'El Grimorio Moderno'})
+ });
+app.use('/ingredientes', require('./routes/ingredients'));
+app.use('/recipes', require('./routes/recipes'));
 
 module.exports = app;
 

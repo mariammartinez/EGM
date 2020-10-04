@@ -1,7 +1,14 @@
 @mixin btnPocion {
-    background-color: #544049;
+  background-color: #544049;
+  color: #fefbe8;
 }
+
 @mixin btnIngredientes {
-    background-color: #926b80
-    
+  background-color: #926b80;
+  color: #fefbe8;
+}
+
+@mixin btnHome {
+  background-color: #f37f36;
+  color: #fefbe8;
 }

@@ -2,8 +2,8 @@
 
 exports.getAllIngredients = (req, res, next) => { 
   
-  req.model.Ingredients.findAll().then( 
-    (ingredients) => {  console.log(ingredients);
+  req.model.ingredients.findAll().then( 
+    (ingredients) => { 
       
       let liste = [];
       for ( let ingredient of ingredients) {
@@ -12,9 +12,8 @@ exports.getAllIngredients = (req, res, next) => {
           description: ingredient.description
         })
       }
-      console.log(liste);
+    
       res.render('ingredientes', {ingredients: liste})
-      
       
       }
 

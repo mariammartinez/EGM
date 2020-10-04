@@ -1,10 +1,17 @@
- <h1 >{{title}}</h1>      
-    <a href="/pociones" class="btn btn-primary" id="btnPocion">Pociones</a>
-    <a href="/ingredientes " class="btn btn-success" id="btnIngredientes" >ingredientes </a>
-
-
-    <div> {{>background}}</div>
-
+<h1> El Grimorio Moderno </h1>
+<ul class="nav nav-tabs menu">
+    <li class="nav-item">
+        <a class="nav-link disabled btnHome" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link  btnIngredientes" href="/ingredientes">Ingredientes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link  btnPocion" href="/recipes">Pociones</a>
+    </li>
+</ul>    
+  
+<div class="container-fluid background"> {{>background}}</div>
         <div class="container">
 
         <div class="dropdown"> 

@@ -1,0 +1,8 @@
+@import "variables";
+
+@mixin title {
+  font-size: 6rem;
+  font-family: $title-font;
+  color: $title-color;
+  text-align: center;
+}

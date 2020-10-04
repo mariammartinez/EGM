@@ -1,24 +1,75 @@
 @import "bootstrap";
 @import "button";
+@import "variables";
+@import "mixin";
 
-#btnPocion{
+.btnPocion {
   @include btnPocion;
 }
-#btnIngredientes{
+
+.btnIngredientes {
   @include btnIngredientes;
 }
 
-#background{
-  background-image: url("https://wiccaradio.net/wp-content/uploads/2019/05/Grimoire40-1.jpg");
-  height: 400px;
-  color: white;
-
+.menu {
+  display: flex;
+  justify-content: flex-end;
 }
 
-body{
+.btnHome {
+  @include btnHome;
+}
+
+body {
   margin: 20px;
+  font-family: $body-font;
 }
-li{
+
+li {
   list-style: none;
 }
 
+.background {
+  background-image: url("/public/img/Grimoire.jpg");
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fefff8;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $title-font;
+}
+
+.backgroundPociones {
+  background-image: url("/public/img/chaudron2.jpg");
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fefff8;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $title-font;
+}
+
+.backgroundIngredientes {
+  background-image: url("/public/img/ingredientes.jpg");
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fefff8;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $title-font;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  @include title;
+}
