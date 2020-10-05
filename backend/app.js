@@ -34,7 +34,7 @@ app.use(function( req, res, next) {
 //app.use('/', require('./routes/routes'));
 
 app.get('/', (req, res  ) => {
-    res.render('main', {'title': 'El Grimorio Moderno'})
+    res.render('main', {'title': "Le fournil d'Arthur" })
  });
 app.use('/ingredientes', require('./routes/ingredients'));
 app.use('/recipes', require('./routes/recipes'));

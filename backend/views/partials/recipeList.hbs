@@ -1,12 +1,25 @@
-<div>
+<section class="recipeList">
     {{#each recipes}}
-    <h3>{{this.name}}</h3>
-     <div><img src="{{this.image}}" alt="cupcakes"></div>
-    <ul>
-        {{#each this.ingredients}}
-            <li>{{this.name}} </li>  
-        {{/each}}
-    </ul>
-    <div>{{this.text}}</div>
+    <div  class="container recipeInstruction">
+        <h3 class="recipeName">{{this.name}}</h3>
+        <div class="recipeImg"><img src="{{this.image}}" alt="cupcakes" class="img-responsive"></div>
+    </div>
+    <div class="container recipeInstruction">
+        <div class="row">
+            <div class="col-6">
+                <h4>Ingredientes</h4>
+                <ul>
+                    {{#each this.ingredients}}
+                        <li>{{this.name}} </li>  
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-6">
+                <h4>Preparation</h4>
+                <div class="text-break">{{this.text}}</div>
+            </div>
+        </div>
+    </div>
+   
     {{/each}}
-</div>
+</section>

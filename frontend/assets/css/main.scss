@@ -1,0 +1,69 @@
+
+.btnPocion {
+  @include btnPocion;
+}
+
+.btnIngredientes {
+  @include btnIngredientes;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnHome {
+  @include btnHome;
+}
+
+body {
+  margin: 20px;
+  font-family: $body-font;
+}
+
+li {
+  list-style: none;
+}
+
+.background {
+  @include backgroundHeader;
+
+  background-image: url("/public/img/Grimoire.jpg");
+}
+
+.backgroundPociones {
+  background-image: url("/public/img/chaudron2.jpg");
+
+  @include backgroundHeader;
+}
+
+.backgroundIngredientes {
+  background-image: url("/public/img/ingredientes.jpg");
+
+  @include backgroundHeader;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  @include title;
+}
+
+.recipeName {
+  @include recipeName;
+}
+
+.recipeImg {
+  @include recipeImg;
+}
+
+section {
+  padding-top: 10px;
+}
+
+.recipeInstruction {
+  background-color: #abb39c;
+}

@@ -7,7 +7,7 @@
     "build": "webpack -p"
   },
   "author": "mariammartinez",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.4.1",

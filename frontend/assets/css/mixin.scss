@@ -6,3 +6,24 @@
   color: $title-color;
   text-align: center;
 }
+
+@mixin backgroundHeader {
+  height: 400px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fefff8;
+  font-size: 4rem;
+  text-align: center;
+  font-family: $title-font;
+}
+
+@mixin recipeName {
+  text-align: center;
+  margin: 15px;
+}
+
+@mixin recipeImg {
+  display: flex;
+  justify-content: center;
+}
