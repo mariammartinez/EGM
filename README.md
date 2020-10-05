@@ -1,1 +1,3 @@
-# EGM
+# El Grimorio Moderno
+
+En construccion
