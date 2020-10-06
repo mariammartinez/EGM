@@ -1,21 +1,12 @@
 <h1>El Grimorio Moderno </h1>
-<ul class="nav nav-tabs menu">
-    <li class="nav-item">
-        <a class="nav-link disabled btnHome" href="/">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link  btnIngredientes" href="/ingredientes">Ingredientes</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link  btnPocion" href="/recipes">Pociones</a>
-    </li>
-</ul>    
+<div>{{>menu}}</div>
   
 <div class="container-fluid background"> {{>background}}</div>
-        <div class="container">
-
-        <div class="dropdown"> 
-            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" >el testador</button>
-           {{> lista}}
-        </div>
+<div class="container">
+    <div class="dropdown"> 
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" >el testador</button>
+        {{> lista}}
     </div>
+</div>
+<div>{{>form}} </div>
+
