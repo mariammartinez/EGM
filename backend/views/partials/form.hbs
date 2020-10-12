@@ -1,11 +1,36 @@
 <div class="container">
-    <p>Cual es tu ingrediente favorito?</p>
-    <form>
-    <input type="radio" id="1" name="ingredient" >
-    <label for="fresa">fresa</label><br>
-    <input type="radio" id="2" name="ingredient" >
-    <label for="chocolate">chocolate</label><br>
-    <input type="radio" id="3" name="ingredient" >
-    <label for="fresa">fresa</label>
+    <form action="/quiz" method="post">
+        <div>
+            <p>Cual es tu ingrediente favorito?</p>
+            <label for="pasas"><input type="radio" value="3" name="q1" >Pasas</label><br>
+            <label for="chocolate"><input type="radio" id="chocolate" value="1" name="q1" >Chocolate</label><br>
+            <label for="vainilla"><input type="radio" value="2" name="q1" >Vainilla</label>
+        </div>
+        <div>
+            <p>Que momento prefieres?</p>
+            <label for="atardecer"><input type="radio" value="1" name="q2" >Atardecer</label><br>
+            <label for="Noche"><input type="radio" value="3" name="q2" >Noche de luna llena</label><br>
+            <label for="dia"><input type="radio" value="2" name="q2" >Dia soleado</label>
+        </div>
+           <div>
+            <p>Que momento prefieres?</p>
+            <label for="atardecer"><input type="radio" value="1" name="q3" >Atardecer</label><br>
+            <label for="Noche"><input type="radio" value="3" name="q3" >Noche de luna llena</label><br>
+            <label for="dia"><input type="radio" value="2" name="q3" >Dia soleado</label>
+        </div>
+           <div>
+            <p>Que momento prefieres?</p>
+
+            <label for="atardecer"><input type="radio" value="1" name="q4" >Atardecer</label><br>
+            <label for="Noche"><input type="radio" value="3" name="q4" >Noche de luna llena</label><br>
+            <label for="dia"><input type="radio" value="2" name="q4" >Dia soleado</label>
+        </div>
+           <div>
+            <p>Que momento prefieres?</p>
+            <label for="atardecer"><input type="radio" value="1" name="q5" >Atardecer</label><br>
+            <label for="Noche"><input type="radio" value="3" name="q5" >Noche de luna llena</label><br> 
+            <label for="dia"><input type="radio" value="2" name="q5" >Dia soleado</label><br>   
+            <input type="submit" value="Enviar">
+        </div>
     </form> 
 </div>

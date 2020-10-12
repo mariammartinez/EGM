@@ -4,6 +4,7 @@ const path = require('path');
 const exphbs =  require('express-handlebars');
 const { Z_PARTIAL_FLUSH } = require('zlib');
 const model = require('./models/index');
+var bodyParser = require('body-parser')
 
 const ingredientsRoutes = require('./routes/ingredients');
 
@@ -30,6 +31,8 @@ app.use(function( req, res, next) {
     next();
 });
 
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // on créé les routes
 //app.use('/', require('./routes/routes'));
 
@@ -38,6 +41,7 @@ app.get('/', (req, res  ) => {
  });
 app.use('/ingredientes', require('./routes/ingredients'));
 app.use('/recipes', require('./routes/recipes'));
+app.use('/quiz', require('./routes/quiz'));
 
 module.exports = app;
 
