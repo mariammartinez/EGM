@@ -25,6 +25,9 @@ Creer config.json dans models avec les clés suivantes:
 }
 ````
 
+Charger le fichier dbtest.sql qui se trouve dans models
+
+
 ````
 npm i
 nodemon serve

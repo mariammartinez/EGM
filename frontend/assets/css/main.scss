@@ -28,17 +28,17 @@ li {
 .background {
   @include backgroundHeader;
 
-  background-image: url("/public/img/Grimoire.jpg");
+  background-image: url("../img/Grimoire.jpg");
 }
 
 .backgroundPociones {
-  background-image: url("/public/img/chaudron2.jpg");
+  background-image: url("../img/chaudron2.jpg");
 
   @include backgroundHeader;
 }
 
 .backgroundIngredientes {
-  background-image: url("/public/img/ingredientes.jpg");
+  background-image: url("../img/ingredientes.jpg");
 
   @include backgroundHeader;
 }
@@ -70,5 +70,4 @@ section {
 
 .quiz {
   @include quiz;
-
 }
