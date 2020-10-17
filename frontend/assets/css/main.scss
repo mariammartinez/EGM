@@ -67,3 +67,8 @@ section {
 .recipeInstruction {
   background-color: #abb39c;
 }
+
+.quiz {
+  @include quiz;
+
+}
