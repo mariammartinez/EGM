@@ -71,3 +71,17 @@ section {
 .quiz {
   @include quiz;
 }
+
+#quiz1 {
+  .quiz1 {
+    display: none;
+  }
+}
+
+.question {
+  @include question-display;
+}
+
+.numbers-of-questions {
+  font-family: $title-font;
+}

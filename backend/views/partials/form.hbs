@@ -1,36 +1,72 @@
 <div class="container ">
-    <form action="/quiz" method="post">
-        <div>
-            <p>Cual es tu ingrediente favorito?</p>
-            <label for="pasas"><input type="radio" id="pasas" value="3" name="q1" >Pasas</label><br>
-            <label for="chocolate"><input type="radio" id="chocolate" value="1" name="q1" >Chocolate</label><br>
-            <label for="vainilla"><input type="radio" id="vainilla" value="2" name="q1" >Vainilla</label>
+    <form action="/quiz" method="post" id="quiz1">
+        <div class="quiz1">
+            <p class="question">Cual es tu ingrediente favorito? <span class="numbers-of-questions">1/5</span></p> 
+            <label for="pasas"><input type="radio" id="pasas" value="3" name="q1"> Pasas</label><br>
+            <label for="chocolate"><input type="radio" id="chocolate" value="1" name="q1"> Chocolate</label><br>
+            <label for="vainilla" ><input type="radio" id="vainilla" value="2" name="q1"> Vainilla</label>
         </div>
-        <div>
-            <p>Que momento prefieres?</p>
-            <label for="atardecer"><input type="radio" id="atardecer" value="1" name="q2" >Atardecer</label><br>
-            <label for="Noche"><input type="radio" id="Noche" value="3" name="q2" >Noche de luna llena</label><br>
-            <label for="dia"><input type="radio" id="dia" value="2" name="q2" >Dia soleado</label>
+        <div class="quiz1">
+            <p class="question">Que momento prefieres? <span class="numbers-of-questions">2/5</span></p>
+            <label for="atardecer"><input type="radio" id="atardecer" value="1" name="q2"> Atardecer</label><br>
+            <label for="Noche"><input type="radio" id="Noche" value="3" name="q2"> Noche de luna llena</label><br>
+            <label for="dia"><input type="radio" id="dia" value="2" name="q2"> Dia soleado</label>
         </div>
-           <div>
-            <p>Que hora prefieres?</p>
-            <label for="3pm"><input type="radio" id="3pm" value="1" name="q3" >3pm</label><br>
-            <label for="10pm"><input type="radio"  id="10pm" value="3" name="q3" >10pm</label><br>
-            <label for="8am"><input type="radio" id="8am"  value="2" name="q3" >8am</label>
+        <div class="quiz1">
+            <p class="question">Que hora prefieres? <span class="numbers-of-questions">3/5</span></p>
+            <label for="3pm"><input type="radio" id="3pm" value="1" name="q3"> 3pm</label><br>
+            <label for="10pm"><input type="radio"  id="10pm" value="3" name="q3"> 10pm</label><br>
+            <label for="8am"><input type="radio" id="8am"  value="2" name="q3"> 8am</label>
         </div>
-           <div>
-            <p>Que estacion prefieres?</p>
-
-            <label for="primavera"><input type="radio" id="primavera" value="1" name="q4" >primavera</label><br>
-            <label for="verano"><input type="radio"  id="verano" value="3" name="q4" >verano</label><br>
-            <label for="otoño"><input type="radio" id="otoño"  value="2" name="q4" >otoño</label>
+        <div class="quiz1">
+            <p class="question">Que estacion prefieres? <span class="numbers-of-questions">4/5</span></p>
+            <label for="primavera"><input type="radio" id="primavera" value="1" name="q4" > Primavera</label><br>
+            <label for="verano"><input type="radio"  id="verano" value="3" name="q4" > Verano</label><br>
+            <label for="otoño"><input type="radio" id="otoño"  value="2" name="q4" > Otoño</label>
         </div>
-           <div>
-            <p>Que animal prefieres?</p>
-            <label for="gato"><input type="radio" id="gato" value="1" name="q5" >gato</label><br>
-            <label for="conejo"><input type="radio"  id="conejo" value="3" name="q5" >conejo</label><br> 
-            <label for="araña"><input type="radio" id="araña" value="2" name="q5" >araña</label><br>   
-            <input type="submit" value="Enviar">
+        <div class="quiz1">
+            <p class="question">Que animal prefieres? <span class="numbers-of-questions">5/5</span></p>
+            <label for="gato"><input type="radio" id="gato" value="1" name="q5"> Gato</label><br>
+            <label for="conejo"><input type="radio"  id="conejo" value="3" name="q5"> Conejo</label><br> 
+            <label for="araña"><input type="radio" id="araña" value="2" name="q5"> Araña</label><br>   
         </div>
     </form> 
 </div>
+
+
+
+
+
+
+<script>
+    function displayQuestion(questionNumber, display) {
+       let questions = document.getElementById('quiz1').getElementsByClassName("quiz1")
+       questions[questionNumber].style.display = display === true ? "block" : 'none';
+    }
+
+    displayQuestion(0, true);
+    let questions = document.getElementById('quiz1').getElementsByClassName("quiz1");
+    for(let i = 0; i< questions.length; i++){
+        // si dernière question
+        if(i === questions.length-1){
+            // todo submit form
+            questions[i].addEventListener("click", function(){
+                document.getElementById("quiz1").submit();
+            })
+        }else{
+            // todo : appliquer event click sur input onChange
+            let options = questions[i].getElementsByTagName("input")
+            for(let j = 0; j< options.length; j++){
+                options[j]  .addEventListener("change", function(){
+                    displayQuestion(i, false);
+                    displayQuestion(i+1, true);
+                })
+            }
+          
+        }
+    }
+
+
+    
+</script>
+

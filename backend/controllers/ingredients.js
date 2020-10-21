@@ -13,7 +13,7 @@ exports.getAllIngredients = (req, res, next) => {
         })
       }
     
-      res.render('ingredientes', {ingredients: liste})
+      res.render('ingredientes', {ingredients: liste, title: "Ingredientes" })
       
       }
 

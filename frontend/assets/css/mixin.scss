@@ -34,3 +34,10 @@
   align-items: center;
   text-align: center;
 }
+
+@mixin question-display {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+

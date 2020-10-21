@@ -12,6 +12,7 @@ const ingredientsRoutes = require('./routes/ingredients');
 //route to home
 //app.use(express.static('/../frontend/public/build'));
 app.use('/public', express.static(__dirname + '/../frontend/public/build'));
+app.use('/files', express.static(__dirname + '/views/img'));
 
 var hbs = exphbs.create({
     extname: '.hbs',
@@ -37,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use('/', require('./routes/routes'));
 
 app.get('/', (req, res  ) => {
-    res.render('main', {'title': "Le fournil d'Arthur" })
+    res.render('main', {'title': "Home" })
  });
 app.use('/ingredientes', require('./routes/ingredients'));
 app.use('/recipes', require('./routes/recipes'));
