@@ -27,12 +27,13 @@ li {
 
 .background {
   @include backgroundHeader;
-
-  background-image: url("../img/Grimoire.jpg");
+  background-image: url("../img/background2.jpg");
+  background-position: center;
 }
 
 .backgroundPociones {
-  background-image: url("../img/chaudron2.jpg");
+  background-image: url("../img/background5.jpg");
+  background-position: center;
 
   @include backgroundHeader;
 }
@@ -52,20 +53,25 @@ h1 {
   @include title;
 }
 
-.recipeName {
-  @include recipeName;
+.recipe-name {
+  @include recipe-name;
 }
 
-.recipeImg {
-  @include recipeImg;
+.recipe-img {
+  @include recipe-img;
 }
 
 section {
   padding-top: 10px;
 }
 
-.recipeInstruction {
-  background-color: #abb39c;
+.recipe-instruction {
+  width: 40%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .quiz {
@@ -99,4 +105,8 @@ section {
 @keyframes mymove {
   from {left: 0px;}
   to {left: 300px;}
+}
+
+.month-ritual {
+  @include month-ritual;
 }

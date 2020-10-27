@@ -18,14 +18,14 @@
   font-family: $title-font;
 }
 
-@mixin recipeName {
+@mixin recipe-name {
   text-align: center;
   margin: 15px;
 }
 
-@mixin recipeImg {
-  display: flex;
-  justify-content: center;
+@mixin recipe-img {
+  display: block;
+  width: 100%;
 }
 
 @mixin quiz {
@@ -35,16 +35,38 @@
   text-align: center;
 }
 
+@mixin month-ritual {
+  width: 40%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f37f36;
+
+  h2 {
+    font-family: $title-font;
+    font-size: 4rem;
+  }
+  
+}
+
 @mixin question-display {
   font-size: 2rem;
   font-weight: bold;
 }
 
 @mixin animation-questions {
-background-color: grey;
-color: honeydew;
-font-weight: bold;
-position: relative;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 60%;
+  position: relative;
+  color: #544049;
 
 }
 

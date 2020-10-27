@@ -1,12 +1,10 @@
 <section class="recipeList">
     {{#each recipes}}
- 
-    <a href="/recipes/{{this.id}}/show"> lalal</a>
-        <div  class="container recipeInstruction">
-            <h3 class="recipeName">{{this.name}}</h3>
-            <div class="recipeImg"> 
+        <div  class="container recipe-instruction">
+            <div class="recipe-img"> 
                 <a href="/recipes/{{this.id}}/show">
-                 <img src="{{this.image}}" alt="cupcakes" class="img-responsive">
+                <img src="{{this.image}}" alt="cupcakes" class="img-responsive recipe-img">
+                <h3 class="recipe-name">{{this.name}}</h3>
                 </a>
             </div>
         </div>   
