@@ -47,6 +47,16 @@ li {
 
 h1 {
   @include title;
+  
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
 }
 
 .recipe-name {
@@ -54,7 +64,10 @@ h1 {
 }
 
 .recipe-img{
-  @include recipe-img;
+  
+  img {
+    max-width: 100%;
+  }
 }
 
 .recipe-instruction {
