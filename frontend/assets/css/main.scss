@@ -45,11 +45,6 @@ li {
   @include backgroundHeader;
 }
 
-.container-fluid {
-  padding: 0;
-  margin: 0;
-}
-
 h1 {
   @include title;
 }
@@ -58,20 +53,16 @@ h1 {
   @include recipe-name;
 }
 
-.recipe-display {
+.recipe-img{
   @include recipe-img;
 }
 
-.recipe-img {
-  width: 100%;
-}
-
-section {
-  padding-top: 10px;
-}
-
 .recipe-instruction {
-  margin-bottom: 20px;
+  @include recipe-instruction;
+
+  img {
+    width: 100%;
+  }
 }
 
 .quiz {

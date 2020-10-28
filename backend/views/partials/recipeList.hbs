@@ -1,12 +1,12 @@
-<section class="recipe-list">
+<div class="container">
     {{#each recipes}}
-        <div  class="container recipe-instruction">
-            <div class="recipe-display"> 
+        <div class="row">
+            <div class="recipe-instruction col-lg-6 offset-lg-3 mt-4"> 
                 <a href="/recipes/{{this.id}}/show">
-                <img src="{{this.image}}" alt="cupcakes" class="img-responsive recipe-img">
+                <img src="{{this.image}}" alt="cupcakes" class="recipe-img">
                 <h3 class="recipe-name">{{this.name}}</h3>
                 </a>
             </div>
         </div>   
     {{/each}}
-</section>
+</div>

@@ -2,17 +2,24 @@
 <div>{{>menu}}</div> 
 <div class="container-fluid background"> {{>background}}</div>
 <div class="container">
-    <div class="dropdown"> 
-        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" >el testador</button>
-        {{> lista}}
+    <div class="row"> 
+        <div class="quiz col-md-6 offset-md-3 mt-4">
+            <h2>Que pocion necesitas hoy?</h2>
+            <p> responde las preguntas y conseguiras la pocion que se adapta a ti en este momento</p>
+            {{>form}} 
+        </div>
+    </div>
+    <div class="row">
+        <div class="month-ritual col-md-6 offset-md-3 mt-4">    
+            {{>ritual}} 
+        </div>
+
     </div>
 </div>
-<div class="quiz">
-    <h2>Que pocion necesitas hoy?</h2>
-    <p> responde las preguntas y conseguiras la pocion que se adapta a ti en este momento</p>
-    {{>form}} 
+
+<div class="month-ritual">    
+    {{>ritual}} 
 </div>
-<div class="month-ritual">    {{>ritual}}  </div>
 
 
 
