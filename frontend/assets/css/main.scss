@@ -27,7 +27,7 @@ li {
 
 .background {
   @include backgroundHeader;
-  
+
   background-image: url("../img/background2.jpg");
   background-position: center;
 }
@@ -68,11 +68,9 @@ h1 {
 
 section {
   padding-top: 10px;
-
 }
 
 .recipe-instruction {
-
   margin-bottom: 20px;
 }
 
@@ -90,10 +88,9 @@ section {
 #quiz1 {
   .quiz1 {
     display: none;
+
     p {
-     
       font-size: 2rem;
-      
     }
   }
 }
@@ -110,22 +107,10 @@ section {
   @include animation-questions;
 }
 
-#div1 {animation-timing-function: linear; animation: mymove 5s ease-in-out;}
-#div2 {animation-timing-function: ease;  animation: mymove 5s ease-in-out;}
-#div3 {animation-timing-function: ease-in;  animation: mymove 5s ease-in-out;}
-#div4 {animation-timing-function: ease-out;}
-#div5 {animation-timing-function: ease-in-out;}
-
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 300px;}
-}
-
 .month-ritual {
   @include month-ritual;
 }
 
 .one-recipe {
-@include one-recipe;
-
+  @include one-recipe;
 }
