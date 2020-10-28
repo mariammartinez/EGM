@@ -25,7 +25,14 @@
 
 @mixin recipe-img {
   display: block;
-  width: 100%;
+  width: 40%;
+  background-color: #FEFEFE;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  
 }
 
 @mixin quiz {
@@ -33,11 +40,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 40%;
+  background-color: #FEFEFE;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 @mixin month-ritual {
   width: 40%;
-  background-color: white;
+  background-color: #FEFEFE;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
   margin: auto;
@@ -49,6 +62,17 @@
     font-family: $title-font;
     font-size: 4rem;
   }
+}
+
+@mixin one-recipe {
+  width: 60%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  color:#060606;
   
 }
 
@@ -59,15 +83,4 @@
 
 @mixin animation-questions {
   font-weight: bold;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px;
-  margin: auto;
-  margin-bottom: 20px;
-  width: 60%;
-  position: relative;
-  color: #544049;
-
 }
-
-

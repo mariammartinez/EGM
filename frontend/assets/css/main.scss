@@ -27,6 +27,7 @@ li {
 
 .background {
   @include backgroundHeader;
+  
   background-image: url("../img/background2.jpg");
   background-position: center;
 }
@@ -57,30 +58,43 @@ h1 {
   @include recipe-name;
 }
 
-.recipe-img {
+.recipe-display {
   @include recipe-img;
+}
+
+.recipe-img {
+  width: 100%;
 }
 
 section {
   padding-top: 10px;
+
 }
 
 .recipe-instruction {
-  width: 40%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px;
-  margin: auto;
+
   margin-bottom: 20px;
 }
 
 .quiz {
   @include quiz;
+
+  color: #926b80;
+
+  h2 {
+    font-family: $title-font;
+    font-size: 3rem;
+  }
 }
 
 #quiz1 {
   .quiz1 {
     display: none;
+    p {
+     
+      font-size: 2rem;
+      
+    }
   }
 }
 
@@ -109,4 +123,9 @@ section {
 
 .month-ritual {
   @include month-ritual;
+}
+
+.one-recipe {
+@include one-recipe;
+
 }
