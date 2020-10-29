@@ -79,3 +79,16 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+@mixin bounce_keyframe {
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    80% { transform: translateY(-15px); }
+  }
+}
+
+@mixin bounce_animation {
+  position: relative;
+  animation: bounce 0.7s ease infinite;
+}

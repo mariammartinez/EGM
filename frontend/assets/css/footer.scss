@@ -1,0 +1,16 @@
+
+.bounce {
+  text-align: center;
+
+  @include bounce_animation;
+  @include bounce_keyframe;
+
+  a {
+    color: #0a0505;
+  }
+
+  :hover {
+    text-decoration: none;
+    color: #949f98;
+  }
+}

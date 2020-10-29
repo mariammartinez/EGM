@@ -40,31 +40,29 @@ li {
 }
 
 .backgroundIngredientes {
-  background-image: url("../img/ingredientes.jpg");
+  background-image: url("../img/lavanda.jpg");
 
   @include backgroundHeader;
 }
 
 h1 {
   @include title;
-  
+
   a {
-    color: black;
+    color: #0a0505;
 
     &:hover {
       text-decoration: none;
-      color: black;
+      color: #0a0505;
     }
   }
-
 }
 
 .recipe-name {
   @include recipe-name;
 }
 
-.recipe-img{
-  
+.recipe-img {
   img {
     max-width: 100%;
   }
@@ -117,4 +115,8 @@ h1 {
 
 .one-recipe {
   @include one-recipe;
+}
+
+.ritual-img {
+  width: 100%;
 }
