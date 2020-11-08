@@ -82,13 +82,21 @@ h1 {
     font-family: $title-font;
     font-size: 3rem;
   }
+
+  p {
+    font-size: 2rem;
+  }
 }
 
 #quiz1 {
   .quiz1 {
     display: none;
 
-    p {
+    h2 {
+      font-size: 3rem;
+    }
+
+    label {
       font-size: 2rem;
     }
   }
