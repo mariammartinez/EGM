@@ -1,14 +1,19 @@
-@mixin btnPocion {
+@import "variables";
+
+.btn-pocion {
   background-color: #544049;
-  color: #fefbe8;
+  color: $btn-font-color;
+  font-size: 2rem;
 }
 
-@mixin btnIngredientes {
+.btn-ingredientes {
   background-color: #926b80;
-  color: #fefbe8;
+  color: $btn-font-color;
+  font-size: 2rem;
 }
 
-@mixin btnHome {
+.btn-home {
   background-color: #f37f36;
-  color: #fefbe8;
+  color: $btn-font-color;
+  font-size: 2rem;
 }

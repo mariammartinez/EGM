@@ -1,23 +1,29 @@
-<h1><a href="/">El Grimorio Moderno</a></h1>
-<div>{{>menu}}</div> 
-<div class="container-fluid background"> {{>background}}</div>
-<div class="container">
-    <div class="row"> 
-        <div class="quiz col-md-6 offset-md-3 mt-4">
-            <h2>Que pocion necesitas hoy?</h2>
-            <p> responde las preguntas y conseguiras la pocion que se adapta a ti en este momento</p>
-            {{>form}} 
-        </div>
-    </div>
-    <div class="row">
-        <div class="month-ritual col-md-6 offset-md-3 mt-4">    
-            {{>ritual}} 
-        </div>
-    </div>
+<section class="container-fluid main">
+    <h1><a href="/">El Grimorio Moderno</a></h1>
     <div>
-        {{>footer}}
+        {{>menu}}
+    </div> 
+    <div class="container-fluid">
+        {{>background}}
     </div>
-</div>
+    <div class="container">
+        <div class="row"> 
+            <div class="quiz col-md-6 offset-md-3 my-5">
+                <h2>Que pocion necesitas hoy?</h2>
+                <p> responde las preguntas y conseguiras la pocion que se adapta a ti en este momento</p>
+                {{>form}} 
+            </div>
+        </div>
+        <div class="row">
+            <div class="month-ritual col-md-6 offset-md-3 mt-4">    
+                {{>ritual}} 
+            </div>
+        </div>
+        <div>
+            {{>footer}}
+        </div>
+    </div>
+</section>
 
 
 

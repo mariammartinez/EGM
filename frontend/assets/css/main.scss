@@ -1,20 +1,11 @@
 
-.btnPocion {
-  @include btnPocion;
-}
 
-.btnIngredientes {
-  @include btnIngredientes;
-}
 
 .menu {
   display: flex;
   justify-content: flex-end;
 }
 
-.btnHome {
-  @include btnHome;
-}
 
 body {
   margin: 20px;
@@ -25,24 +16,30 @@ li {
   list-style: none;
 }
 
-.background {
-  @include backgroundHeader;
+.main {
+  @include background;
 
-  background-image: url("../img/background2.jpg");
-  background-position: center;
+  background-image: $background-main;
 }
 
-.backgroundPociones {
-  background-image: url("../img/background5.jpg");
-  background-position: center;
+.background-header {
+  @include box-transparent-noir;
 
-  @include backgroundHeader;
+  h2 {
+    font-size: 4rem;
+  }
 }
 
-.backgroundIngredientes {
-  background-image: url("../img/lavanda.jpg");
+.background-recipes {
+  @include background;
 
-  @include backgroundHeader;
+  background-image: $background-recipes;
+}
+
+.background-ingredientes {
+  @include background;
+
+  background-image: $background-ingredients;
 }
 
 h1 {
